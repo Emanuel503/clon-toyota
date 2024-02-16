@@ -6,7 +6,7 @@ import { VscMenu } from "react-icons/vsc";
 
 export default function Nav() {
   return (
-    <nav className="h-16 w-full bg-white flex flex-row items-center fixed z-10 px-12">
+    <nav className="h-16 w-full bg-white flex flex-row items-center fixed z-20 px-12">
         <Link href="/">
             <Image
                 src="/toyota_logo.svg"
