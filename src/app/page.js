@@ -1,4 +1,3 @@
-import Nav from './components/Nav';
 import SectionBeyond from './components/SectionBeyond';
 import SectionDiscover from './components/SectionDiscover';
 import SectionExplore from './components/SectionExplore';
@@ -9,8 +8,6 @@ import SectionVideo from './components/SectionVideo';
 export default function Home() {
   return (
     <main>
-        <Nav/>
-
         <SectionHeader/>
 
         <SectionExplore/>
