@@ -8,7 +8,7 @@ import Links from './Links';
 export default function Footer() {
   return (
     <footer className='w-full bg-[#f6f6f6] py-10 px-8 xl:px-40'>
-        <div className='grid grid-cols-12 gap-10'>
+        <div className='grid grid-cols-12 gap-y-10'>
 
             <div className='col-span-12 grid grid-cols-12 xl:col-span-6 gap-4'>
                 <Link className='font-bold text-sm hover:underline underline-offset-2 transition-all col-span-12 md:col-span-3 text-left md:text-center xl:text-left' href="/">Accesibilidad</Link>
