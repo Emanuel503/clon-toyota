@@ -20,7 +20,7 @@ export default function CarruselPosts() {
     };
 
     return (
-        <div className={`h-auto text-white pt-14 flex flex-col items-center justify-center transition-all`} style={{background: posts[currentSlide].color }}>
+        <div className={`h-auto text-white pt-14 px-3 md:px-0 flex flex-col items-center justify-center transition-all`} style={{background: posts[currentSlide].color }}>
             <h4 className='text-lg font-bold'>{`${posts[currentSlide].title}`}</h4>
             <h3 className='text-3xl font-bold mt-4 mb-20 text-center'>{`${posts[currentSlide].subtitle}`}</h3>
 
@@ -58,14 +58,14 @@ export default function CarruselPosts() {
             </div>
 
             <div className='flex flex-row items-center justify-center mb-20'>
-                <button onClick={prevSlide} className='bg-white text-black text-3xl py-1 px-4 rounded-3xl mr-10'><MdKeyboardArrowLeft/></button>
+                <button onClick={prevSlide} className='bg-white text-black text-xl md:text-3xl py-1 px-4 rounded-3xl mr-6 md:mr-10'><MdKeyboardArrowLeft/></button>
                 {
                     posts.map((post, index) => (
                         <button onClick={() => setCurrentSlide(index)} key={post.id + index} className={currentSlide === index ? `bg-white w-14 h-2 rounded-3xl mx-1`: `bg-white/75 w-10 h-1 rounded-3xl mx-1`}></button>
                     ))
                 }
 
-                <button onClick={nextSlide} className='bg-white text-black text-3xl py-1 px-4 rounded-3xl ml-10'><MdKeyboardArrowRight/></button>
+                <button onClick={nextSlide} className='bg-white text-black text-xl md:text-3xl py-1 px-4 rounded-3xl ml-6 md:ml-10'><MdKeyboardArrowRight/></button>
             </div>
         </div>
     )
