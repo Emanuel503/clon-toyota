@@ -37,14 +37,13 @@ export default function CarruselPosts() {
                     }}
                 >
                     {posts.map((image, index) => (
-                        <div key={index} className="w-full">
+                        <div key={index} className="w-full h-auto">
                             {image.type === 'image' &&
                                 <Image
                                     src={`/${image.url}`}
                                     alt={`Slide ${index + 1}`}
-                                    width={854} 
-                                    height={480}
-                                    layout="responsive"
+                                    width={1920} 
+                                    height={1080}
                                 />
                             }
 
