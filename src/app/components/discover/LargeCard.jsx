@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function LargeCard({color = "FFFFFF", image = "", imageDescription = "",  title = "", subtitle = "", description = "", button = "Ver más", link ="/"}) {
   return (
-    <div className={`col-span-12 rounded-lg grid grid-cols-12 bg-[#${color}]`}>
+    <div className={`col-span-12 rounded-lg grid grid-cols-12`} style={{background:`#${color}`}}>
         <Link href={link} className='col-span-12 md:col-span-6'>
             <Image src={image} width={1920} height={1080} alt={imageDescription} className='rounded-t-lg md:rounded-r-none md:rounded-l-lg w-full h-full object-cover'/>
         </Link>
