@@ -14,8 +14,8 @@ export default function SectionBeyond() {
                     </Link>
                 </div>
 
-                <Image className='hidden lg:block' width={1920} height={1080} src="/cars-beyond-full.jpg" alt="Icono de imagen diseñar" />
-                <Image className='block lg:hidden' width={1920} height={1080} src="/cars-beyond-medium.jpg" alt="Icono de imagen diseñar" />
+                <Image className='hidden lg:block' width={1920} height={1080} layout='responsive' src="/cars-beyond-full.jpg" alt="Icono de imagen diseñar" />
+                <Image className='block lg:hidden' width={1920} height={1080} layout='responsive' src="/cars-beyond-medium.jpg" alt="Icono de imagen diseñar" />
             </div>
 
             <CarruselPosts/>
