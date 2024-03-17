@@ -115,7 +115,7 @@ export default function SectionDiscover() {
                             image='/military.jpg'
                             imageDescription='Imagen de military'
                             title='OFERTAS Y SERVICIOS'
-                            subtitle='Reembolso milita'
+                            subtitle='Reembolso militar'
                             description='Estamos muy agradecidos por tu servicio y todo lo que haces, por lo que deseamos ofrecerte una muestra de nuestro aprecio.'
                             button='Ver más'
                        />
