@@ -1,242 +1,140 @@
 'use client'
 
 import Image from 'next/image';
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import Card from './explore/Card';
 
 export default function SectionExplore() {
 
-  const [activeTab, setActiveTab] = useState(1);
+    const [activeTab, setActiveTab] = useState(1);
 
-  const handleTabClick = (tabNumber) => {
-    setActiveTab(tabNumber);
-  };
+    const handleTabClick = (tabNumber) => {
+        setActiveTab(tabNumber);
+    };
+
+    const [scroll, setScroll] = useState(0);
+
+    const scrollRef = useRef('');
+
+    const nextSlide = () => {        
+        let newScroll = scroll + 300;
+        if(newScroll > 1300 ) return
+        setScroll(newScroll);
+        scrollRef.current.scrollLeft = newScroll;
+    };
+    
+    const prevSlide = () => {
+        let newScroll = scroll - 300;
+        if(newScroll < 0) return
+        setScroll(newScroll); 
+        scrollRef.current.scrollLeft = newScroll;
+    };
   
-  return (
-    <section className='mb-10'>
-        <h2 className='text-center font-bold text-5xl mb-20'>Explora los vehículos</h2>
+    return (
+        <section className='mb-10 mx-12'>
+            <h2 className='text-center font-bold text-5xl mb-20'>Explora los vehículos</h2>
 
-        <div className='flex flex-row items-center justify-center'>
-            <div className="cursor-pointer p-4" onClick={() => handleTabClick(1)}>
-                Autos y Minivan
+            <div className='flex flex-row items-center justify-center mb-5'>
+                <button className={activeTab == 1 ? `border-b-2 px-5 border-black h-14` : `border-b-2 px-5 border-gray-200 h-14`} onClick={() => handleTabClick(1)}>
+                    Autos y Minivan
+                </button>
+                <button className={activeTab == 2 ? `border-b-2 px-5 border-black h-14` : `border-b-2 px-5 border-gray-200 h-14`} onClick={() => handleTabClick(2)}>
+                    Camionetas
+                </button>
+                <button className={activeTab == 3 ? `border-b-2 px-5 border-black h-14` : `border-b-2 px-5 border-gray-200 h-14`} onClick={() => handleTabClick(3)}>
+                    Crossovers y SUV
+                </button>
             </div>
-            <div className="cursor-pointer p-4" onClick={() => handleTabClick(2)}>
-                Camionetas
-          </div>
-        </div>
 
-        <div className='flex flex-row gap-6 mx-12'>
-            {activeTab === 1 && 
-              <>
-                <div className='grid grid-cols-12 w-1/3 h-96 bg-[#5c535c] rounded-xl'>
-                    <div className='col-span-12 xl:col-span-6'>
-                          <Image
-                            src="/crw.png"
-                            width={350}
-                            height={261}
-                            alt="Logo de Toyota"
-                            className="w-full h-full object-cover rounded-l-xl xl:rounded-t-xl"
-                          />
-                    </div>
+            <div ref={scrollRef} className='flex gap-x-3 overflow-hidden transition-transform duration-500'>
+                {activeTab === 1 && 
+                <>
+                    <Card
+                        image="/sup.jpeg"
+                        imageAlt="GR Supra"
+                        legend="Tal cual: $65,275. * 19/27 est. MPG *"
+                        title="2024"
+                        subtitle="GR Supra"
+                        description="Deja tu huella con una obra de arte automovilística."
+                        price="$46,440"
+                        priceLegend="MSRP inicial *"
+                        dues="42/41"
+                        duesLegend="Hasta est. MPG *"
+                        color="1e1e21"
+                    >
+                    </Card>
 
-                    <div className='col-span-12 xl:col-span-6 p-5 text-white h-96'>
-                          <h4 className='mb-6'>2024 | Hibrido</h4>
-                          <h3 className='text-2xl font-bold mb-5'>Toyota Crown</h3>
-                          <h4 className='mb-16'>Más que un viaje elevado.</h4>
+                    <Card
+                        image="/crw.jpeg"
+                        imageAlt="Toyota Crown"
+                        legend="Tal cual: $54,345. * 29/32 est. MPG *"
+                        title="2024 | Hibrido"
+                        subtitle="Toyota Crown"
+                        description="Más que un viaje elevado."
+                        price="$40,350"
+                        priceLegend="MSRP inicial *"
+                        dues="42/41"
+                        duesLegend="Hasta est. MPG *"
+                        color="5c535c"
+                    >
+                    </Card>
 
-                          <div className='grid grid-cols-12 '>
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>$40,350</h3>
-                                  <span className='text-xs'>MSRP inicial *</span>
+                    <Card
+                        image="/prp.jpeg"
+                        imageAlt="Prius Prime"
+                        legend="Tal cual: $39,670. * 48/114 est. MPG */MPGe *"
+                        title="2024 | Híbrido Plug-in"
+                        subtitle="Prius Prime"
+                        description="Maneja un plug-in con potencia."
+                        price="$32,975"
+                        priceLegend="MSRP inicial *"
+                        dues="48/114"
+                        duesLegend="Hasta est. MPG *"
+                        color="567762"
+                    >
+                    </Card>
 
-                                  <button className='bg-white px-6 py-2 rounded-3xl font-bold text-black mt-5'>Explorar</button>
-                              </div>
+                    <Card
+                        image="/grc.jpeg"
+                        imageAlt="GR Corolla"
+                        legend="Tal cual: $45,140. * 21/28 est. MPG *"
+                        title="2024"
+                        subtitle="GR Corolla"
+                        description="Las curvas te llaman."
+                        price="$36,500"
+                        priceLegend="MSRP inicial *"
+                        dues="21/28"
+                        duesLegend="Hasta est. MPG *"
+                        color="006095"
+                    >
+                    </Card>
 
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>42/41</h3>
-                                  <span className='text-xs'>Hasta est. MPG *</span>
+                    <Card
+                        image="/coh.jpeg"
+                        imageAlt="Corolla"
+                        legend="Tal cual: $25,490. * 31/40 est. MPG *"
+                        title="2024Híbrido disponible"
+                        subtitle="Corolla"
+                        description="Divertido de manejar, atractivo de mirar."
+                        price="$22,050"
+                        dues="32/41"
+                        color="85633a"
+                    >
+                    </Card>
+                </>
+                }
+            </div>
 
-                                  <button className='px-6 py-2 rounded-3xl font-bold text-white mt-5 flex items-center gap-x-2 hover:gap-3 transition-all'>Diseñar <MdOutlineKeyboardArrowRight className='text-xl'/></button>
-                              </div>
-                          </div>
-                    </div>
+            <div className='flex flex-row items-center justify-center mt-20 gap-x-7'>
+                <button onClick={prevSlide} className={`bg-black text-white text-3xl py-1 px-4 rounded-3xl ${scroll < 300 ? 'opacity-50' : ''}`}><MdKeyboardArrowLeft/></button>
+                <div>
+                    Mover
                 </div>
-
-                <div className='grid grid-cols-12 w-1/3 h-96 bg-[#5c535c] rounded-xl'>
-                    <div className='col-span-12 xl:col-span-6'>
-                          <Image
-                            src="/crw.png"
-                            width={350}
-                            height={261}
-                            alt="Logo de Toyota"
-                            className="w-full h-full object-cover rounded-l-xl xl:rounded-t-xl"
-                          />
-                    </div>
-
-                    <div className='col-span-12 xl:col-span-6 p-5 text-white h-96'>
-                          <h4 className='mb-6'>2024 | Hibrido</h4>
-                          <h3 className='text-2xl font-bold mb-5'>Toyota Crown</h3>
-                          <h4 className='mb-16'>Más que un viaje elevado.</h4>
-
-                          <div className='grid grid-cols-12 '>
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>$40,350</h3>
-                                  <span className='text-xs'>MSRP inicial *</span>
-
-                                  <button className='bg-white px-6 py-2 rounded-3xl font-bold text-black mt-5'>Explorar</button>
-                              </div>
-
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>42/41</h3>
-                                  <span className='text-xs'>Hasta est. MPG *</span>
-
-                                  <button className='px-6 py-2 rounded-3xl font-bold text-white mt-5 flex items-center gap-x-2 hover:gap-3 transition-all'>Diseñar <MdOutlineKeyboardArrowRight className='text-xl'/></button>
-                              </div>
-                          </div>
-                    </div>
-                </div>
-
-                <div className='grid grid-cols-12 w-1/3 h-96 bg-[#5c535c] rounded-xl'>
-                    <div className='col-span-12 xl:col-span-6'>
-                          <Image
-                            src="/crw.png"
-                            width={350}
-                            height={261}
-                            alt="Logo de Toyota"
-                            className="w-full h-full object-cover rounded-l-xl xl:rounded-t-xl"
-                          />
-                    </div>
-
-                    <div className='col-span-12 xl:col-span-6 p-5 text-white h-96'>
-                          <h4 className='mb-6'>2024 | Hibrido</h4>
-                          <h3 className='text-2xl font-bold mb-5'>Toyota Crown</h3>
-                          <h4 className='mb-16'>Más que un viaje elevado.</h4>
-
-                          <div className='grid grid-cols-12 '>
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>$40,350</h3>
-                                  <span className='text-xs'>MSRP inicial *</span>
-
-                                  <button className='bg-white px-6 py-2 rounded-3xl font-bold text-black mt-5'>Explorar</button>
-                              </div>
-
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>42/41</h3>
-                                  <span className='text-xs'>Hasta est. MPG *</span>
-
-                                  <button className='px-6 py-2 rounded-3xl font-bold text-white mt-5 flex items-center gap-x-2 hover:gap-3 transition-all'>Diseñar <MdOutlineKeyboardArrowRight className='text-xl'/></button>
-                              </div>
-                          </div>
-                    </div>
-                </div>
-              </>
-            }
-            {activeTab === 2 && 
-               <>
-                <div className='grid grid-cols-12 w-1/3 h-96 bg-[#567762] rounded-xl'>
-                    <div className='col-span-12 xl:col-span-6'>
-                          <Image
-                            src="/crw.png"
-                            width={350}
-                            height={261}
-                            alt="Logo de Toyota"
-                            className="w-full h-full object-cover rounded-l-xl xl:rounded-t-xl"
-                          />
-                    </div>
-
-                    <div className='col-span-12 xl:col-span-6 p-5 text-white h-96'>
-                          <h4 className='mb-6'>2024 | Hibrido</h4>
-                          <h3 className='text-2xl font-bold mb-5'>Toyota Crown</h3>
-                          <h4 className='mb-16'>Más que un viaje elevado.</h4>
-
-                          <div className='grid grid-cols-12 '>
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>$40,350</h3>
-                                  <span className='text-xs'>MSRP inicial *</span>
-
-                                  <button className='bg-white px-6 py-2 rounded-3xl font-bold text-black mt-5'>Explorar</button>
-                              </div>
-
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>42/41</h3>
-                                  <span className='text-xs'>Hasta est. MPG *</span>
-
-                                  <button className='px-6 py-2 rounded-3xl font-bold text-white mt-5 flex items-center gap-x-2 hover:gap-3 transition-all'>Diseñar <MdOutlineKeyboardArrowRight className='text-xl'/></button>
-                              </div>
-                          </div>
-                    </div>
-                </div>
-
-                <div className='grid grid-cols-12 w-1/3 h-96 bg-[#567762] rounded-xl'>
-                    <div className='col-span-12 xl:col-span-6'>
-                          <Image
-                            src="/crw.png"
-                            width={350}
-                            height={261}
-                            alt="Logo de Toyota"
-                            className="w-full h-full object-cover rounded-l-xl xl:rounded-t-xl"
-                          />
-                    </div>
-
-                    <div className='col-span-12 xl:col-span-6 p-5 text-white h-96'>
-                          <h4 className='mb-6'>2024 | Hibrido</h4>
-                          <h3 className='text-2xl font-bold mb-5'>Toyota Crown</h3>
-                          <h4 className='mb-16'>Más que un viaje elevado.</h4>
-
-                          <div className='grid grid-cols-12 '>
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>$40,350</h3>
-                                  <span className='text-xs'>MSRP inicial *</span>
-
-                                  <button className='bg-white px-6 py-2 rounded-3xl font-bold text-black mt-5'>Explorar</button>
-                              </div>
-
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>42/41</h3>
-                                  <span className='text-xs'>Hasta est. MPG *</span>
-
-                                  <button className='px-6 py-2 rounded-3xl font-bold text-white mt-5 flex items-center gap-x-2 hover:gap-3 transition-all'>Diseñar <MdOutlineKeyboardArrowRight className='text-xl'/></button>
-                              </div>
-                          </div>
-                    </div>
-                </div>
-
-                <div className='grid grid-cols-12 w-1/3 h-96 bg-[#567762] rounded-xl'>
-                    <div className='col-span-12 xl:col-span-6'>
-                          <Image
-                            src="/crw.png"
-                            width={350}
-                            height={261}
-                            alt="Logo de Toyota"
-                            className="w-full h-full object-cover rounded-l-xl xl:rounded-t-xl"
-                          />
-                    </div>
-
-                    <div className='col-span-12 xl:col-span-6 p-5 text-white h-96'>
-                          <h4 className='mb-6'>2024 | Hibrido</h4>
-                          <h3 className='text-2xl font-bold mb-5'>Toyota Crown</h3>
-                          <h4 className='mb-16'>Más que un viaje elevado.</h4>
-
-                          <div className='grid grid-cols-12 '>
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>$40,350</h3>
-                                  <span className='text-xs'>MSRP inicial *</span>
-
-                                  <button className='bg-white px-6 py-2 rounded-3xl font-bold text-black mt-5'>Explorar</button>
-                              </div>
-
-                              <div className='col-span-6'>
-                                  <h3 className='text-2xl'>42/41</h3>
-                                  <span className='text-xs'>Hasta est. MPG *</span>
-
-                                  <button className='px-6 py-2 rounded-3xl font-bold text-white mt-5 flex items-center gap-x-2 hover:gap-3 transition-all'>Diseñar <MdOutlineKeyboardArrowRight className='text-xl'/></button>
-                              </div>
-                          </div>
-                    </div>
-                </div>
-              </>
-            }
-        </div>
-    </section>
-  )
+                <button onClick={nextSlide} className={`bg-black text-white text-3xl py-1 px-4 rounded-3xl ${scroll > 1300 ? 'opacity-50' : ''}`}><MdKeyboardArrowRight/></button>
+            </div>
+        </section>
+    )
 }
