@@ -1,8 +1,6 @@
 'use client'
 
-import Image from 'next/image';
 import React, { useRef, useState } from 'react'
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import Card from './explore/Card';
