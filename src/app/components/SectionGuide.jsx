@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function SectionGuide() {
   return (
-    <section className='py-5 flex flex-col items-center justify-center mt-5 mx-20'>
+    <section className='py-5 flex flex-col items-center justify-center mt-5 mx-10 md:mx-20'>
         <h2 className='text-6xl mb-16 font-bold text-center'>Guía de compra</h2>
         
         <div className='grid grid-cols-12 w-full'>
