@@ -6,8 +6,4 @@
     transition-property: transform;
     transition-duration: 500ms; /* Ajusta la duración según sea necesario */
     transition-timing-function: ease-in-out; /* Ajusta la función de temporización según sea necesario */
-  }
-
-  .card-container {
-    transition: transform 0.5s ease-in-out;
-  }
+}
