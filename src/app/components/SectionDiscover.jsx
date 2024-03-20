@@ -17,13 +17,13 @@ export default function SectionDiscover() {
             <h2 className="text-6xl font-bold text-center mb-10">Descubre Toyota</h2>
 
             <div className='flex flex-row items-center justify-center mb-5'>
-                <button className={activeTab == 1 ? `border-b-2 px-5 border-black h-14` : `border-b-2 px-5 border-gray-200 h-14`} onClick={() => handleTabClick(1)}>
+                <button className={`border-b-2 px-5 ${activeTab === 1 ? 'border-black h-14' : 'border-gray-200 h-14'}`} onClick={() => handleTabClick(1)}>
                     Destacadas
                 </button>
-                <button className={activeTab == 2 ? `border-b-2 px-5 border-black h-14` : `border-b-2 px-5 border-gray-200 h-14`} onClick={() => handleTabClick(2)}>
+                <button className={`border-b-2 px-5 ${activeTab === 2 ? 'border-black h-14' : 'border-gray-200 h-14'}`} onClick={() => handleTabClick(2)}>
                     Vehículos y tecnología
                 </button>
-                <button className={activeTab == 3 ? `border-b-2 px-5 border-black h-14` : `border-b-2 px-5 border-gray-200 h-14`} onClick={() => handleTabClick(3)}>
+                <button className={`border-b-2 px-5 ${activeTab === 3 ? 'border-black h-14' : 'border-gray-200 h-14'}`} onClick={() => handleTabClick(3)}>
                     Ofertas y servicios
                 </button>
             </div>

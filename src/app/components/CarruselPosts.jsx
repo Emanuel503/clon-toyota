@@ -61,7 +61,7 @@ export default function CarruselPosts() {
                 <button onClick={prevSlide} className='bg-white text-black text-xl md:text-3xl py-1 px-4 rounded-3xl mr-6 md:mr-10'><MdKeyboardArrowLeft/></button>
                 {
                     posts.map((post, index) => (
-                        <button onClick={() => setCurrentSlide(index)} key={post.id + index} className={currentSlide === index ? `bg-white w-14 h-2 rounded-3xl mx-1`: `bg-white/75 w-10 h-1 rounded-3xl mx-1`}></button>
+                        <button onClick={() => setCurrentSlide(index)} key={post.id + index} className={`rounded-3xl mx-1 ${currentSlide === index ? 'bg-white w-14 h-2' : 'bg-white/75 w-10 h-1'}`}></button>
                     ))
                 }
 

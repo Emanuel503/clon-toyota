@@ -35,13 +35,13 @@ export default function SectionExplore() {
             <h2 className='text-center font-bold text-5xl mb-20'>Explora los vehículos</h2>
 
             <div className='flex flex-row items-center justify-center mb-5'>
-                <button className={activeTab == 1 ? `border-b-2 px-5 border-black h-14` : `border-b-2 px-5 border-gray-200 h-14`} onClick={() => handleTabClick(1)}>
+                <button className={`border-b-2 px-5 ${activeTab === 1 ? 'border-black h-14' : 'border-gray-200 h-14'}`} onClick={() => handleTabClick(1)}>
                     Autos y Minivan
                 </button>
-                <button className={activeTab == 2 ? `border-b-2 px-5 border-black h-14` : `border-b-2 px-5 border-gray-200 h-14`} onClick={() => handleTabClick(2)}>
+                <button className={`border-b-2 px-5 ${activeTab === 2 ? 'border-black h-14' : 'border-gray-200 h-14'}`} onClick={() => handleTabClick(2)}>
                     Camionetas
                 </button>
-                <button className={activeTab == 3 ? `border-b-2 px-5 border-black h-14` : `border-b-2 px-5 border-gray-200 h-14`} onClick={() => handleTabClick(3)}>
+                <button className={`border-b-2 px-5 ${activeTab === 3 ? 'border-black h-14' : 'border-gray-200 h-14'}`} onClick={() => handleTabClick(3)}>
                     Crossovers y SUV
                 </button>
             </div>
