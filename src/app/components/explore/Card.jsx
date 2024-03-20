@@ -5,8 +5,8 @@ import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 
 export default function Card({image, imageAlt, legend, title, subtitle, description, price, priceLegend, dues, duesLegend, color = "000000", link = "/" }) {
   return (
-    <div className={`grid grid-cols-12 mx-2 rounded-xl min-w-300px xl:min-w-600px`} style={{background: `#${color}`}}>
-        <div className='col-span-12 xl:col-span-6 relative'>
+    <div className={`grid grid-cols-12 mx-2 rounded-xl min-w-300px xl:min-w-600px h-[680px] xl:h-96`} style={{background: `#${color}`}}>
+        <div className='col-span-12 xl:col-span-6 relative h-80 xl:h-full'>
             <Image
                 src={image}
                 width={350}
