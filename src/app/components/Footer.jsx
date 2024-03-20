@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className='w-full bg-[#f6f6f6] py-10 px-8 xl:px-40'>
         <div className='grid grid-cols-12 gap-y-10'>
 
-            <div className='col-span-12 grid grid-cols-12 xl:col-span-6 gap-4'>
+            <div className='col-span-12 grid grid-cols-12 xl:col-span-5 gap-4'>
                 <Link className='font-bold text-sm hover:underline underline-offset-2 transition-all col-span-12 md:col-span-3 text-left md:text-center xl:text-left' href="/">Accesibilidad</Link>
 
                 <Link className='font-bold text-sm text-red-600 hover:underline underline-offset-2 transition-all flex flex-row items-start justify-normal md:justify-center xl:justify-normal gap-x-2 col-span-12 md:col-span-5 text-left md:text-center xl:text-left' href="/">
@@ -25,12 +25,12 @@ export default function Footer() {
                 <Link className='bg-red-600 py-3 px-8 text-white text-sm rounded-3xl font-semibold hover:bg-red-700 transition-all duration-500 ' href="/">Preferencias</Link>
             </div>
 
-            <div className='col-span-12 md:col-span-6 xl:col-span-3 flex flex-wrap gap-5 justify-center'>
-                <Link href="/" className='border border-black hover:border-2 p-2 rounded-full'><FaFacebook className='text-lg'/></Link>
-                <Link href="/" className='border border-black hover:border-2 p-2 rounded-full'><FaYoutube className='text-lg'/></Link>
-                <Link href="/" className='border border-black hover:border-2 p-2 rounded-full'><FaXTwitter className='text-lg'/></Link>
-                <Link href="/" className='border border-black hover:border-2 p-2 rounded-full'><FaInstagram className='text-lg'/></Link>
-                <Link href="/" className='border border-black hover:border-2 p-2 rounded-full'><FaPinterest className='text-lg'/></Link>
+            <div className='col-span-12 md:col-span-6 xl:col-span-4 flex flex-wrap gap-5 justify-center'>
+                <Link href="/" className='border flex items-center justify-center w-10 h-10 border-black hover:border-2 p-2 rounded-full'><FaFacebook className='text-lg'/></Link>
+                <Link href="/" className='border flex items-center justify-center w-10 h-10 border-black hover:border-2 p-2 rounded-full'><FaYoutube className='text-lg'/></Link>
+                <Link href="/" className='border flex items-center justify-center w-10 h-10 border-black hover:border-2 p-2 rounded-full'><FaXTwitter className='text-lg'/></Link>
+                <Link href="/" className='border flex items-center justify-center w-10 h-10 border-black hover:border-2 p-2 rounded-full'><FaInstagram className='text-lg'/></Link>
+                <Link href="/" className='border flex items-center justify-center w-10 h-10 border-black hover:border-2 p-2 rounded-full'><FaPinterest className='text-lg'/></Link>
             </div>
         </div>
 
