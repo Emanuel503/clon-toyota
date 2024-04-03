@@ -7,6 +7,9 @@ import { FaUserCircle } from "react-icons/fa";
 import { VscMenu } from "react-icons/vsc";
 import { useState } from "react";
 import Card from "./nav/Card";
+import { RiUserLine } from "react-icons/ri";
+import { GoTools } from "react-icons/go";
+import { FaListUl } from "react-icons/fa";
 
 export default function Nav() {
 
@@ -25,6 +28,8 @@ export default function Nav() {
   const handleTabClick = (tabNumber) => {
       setActiveTab(tabNumber);
   };
+
+  const [activeTabDue, setActiveTabDue] = useState(1)
 
   return (
     <nav className="h-16 w-full bg-white z-20">
@@ -59,7 +64,7 @@ export default function Nav() {
 
         {
          menu == 1 &&
-         <div className="bg-white w-full shadow-2xl py-8 border-t  border-b absolute z-20">
+         <div className="hidden lg:block bg-white w-full shadow-2xl py-8 border-t  border-b absolute z-20">
             <div className='flex flex-row items-center justify-center mb-5'>
                 <button className={`border-b-2 px-5 text-sm h-10 ${activeTab === 1 ? 'border-black text-black' : 'border-gray-200 text-gray-500'}`} onClick={() => handleTabClick(1)}>
                     Autos y Minivan
@@ -472,41 +477,121 @@ export default function Nav() {
 
         {
          menu == 2 &&
-         <div className="bg-white py-8 border-t rounded-b-lg w-full lg:w-11/12 xl:w-4/6 right-0  xl:mr-20 absolute z-20 grid grid-cols-12">
+         <div className="hidden lg:grid grid-cols-12 bg-white py-8 border-t rounded-b-lg w-full lg:w-11/12 xl:w-4/6 right-0  xl:mr-20 absolute z-20">
             <div className="col-span-6 border-gray-300 border-r p-5 grid grid-cols-12 gap-y-12 gap-x-8">
               <div className="col-span-6">
                 <Link className="font-semibold flex items-center gap-2 text-sm hover:underline" href="/">Diseña y cotiza <MdOutlineKeyboardArrowRight className='text-xl'/> </Link>
                 <p className="text-gray-500 text-sm">Diseña tu toyota</p>
               </div>
               <div className="col-span-6">
-                <Link className="font-semibold flex items-center gap-2 text-sm hover:underline" href="/">Diseña y cotiza <MdOutlineKeyboardArrowRight className='text-xl'/> </Link>
+                <Link className="font-semibold flex items-center gap-2 text-sm hover:underline" href="/">Toyota Certificados <MdOutlineKeyboardArrowRight className='text-xl'/> </Link>
                 <p className="text-gray-500 text-sm">Ver modelos usados</p>
               </div>
               <div className="col-span-6">
-                <Link className="font-semibold flex items-center gap-2 text-sm hover:underline" href="/">Diseña y cotiza <MdOutlineKeyboardArrowRight className='text-xl'/> </Link>
+                <Link className="font-semibold flex items-center gap-2 text-sm hover:underline" href="/">Buscar inventario <MdOutlineKeyboardArrowRight className='text-xl'/> </Link>
                 <p className="text-gray-500 text-sm">Encuentra tu auto</p>
               </div>
               <div className="col-span-6">
-                <Link className="font-semibold flex items-center gap-2 text-sm hover:underline" href="/">Diseña y cotiza <MdOutlineKeyboardArrowRight className='text-xl'/> </Link>
+                <Link className="font-semibold flex items-center gap-2 text-sm hover:underline" href="/">Accesorios <MdOutlineKeyboardArrowRight className='text-xl'/> </Link>
                 <p className="text-gray-500 text-sm">Personaliza tu toyota</p>
               </div>
             </div>
 
             <div className="col-span-3 border-gray-300 border-r p-5">
-              <Link href="/" className="text-xs text-gray-700 block mb-4 hover:underline">Buscar concesionarios</Link>
-              <Link href="/" className="text-xs text-gray-700 block mb-4 hover:underline">Ver folletos</Link>
-              <Link href="/" className="text-xs text-gray-700 block mb-4 hover:underline">Comparar Modelos</Link>
-              <Link href="/" className="text-xs text-gray-700 block mb-4 hover:underline">Pedir cotización</Link>
-              <Link href="/" className="text-xs text-gray-700 block mb-4 hover:underline">Toyota Financial Services</Link>
-              <Link href="/" className="text-xs text-gray-700 block mb-0 hover:underline">Southeast Toyota Finance</Link>
+              <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Buscar concesionarios</Link>
+              <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Ver folletos</Link>
+              <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Comparar Modelos</Link>
+              <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Pedir cotización</Link>
+              <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Toyota Financial Services</Link>
+              <Link href="/" className="text-sm text-gray-700 block mb-0 hover:underline">Southeast Toyota Finance</Link>
             </div>
 
             <div className="col-span-3 p-5">
-              <Link href="/" className="text-xs text-gray-700 block mb-4 hover:underline">Calcula tu pago</Link>
-              <Link href="/" className="text-xs text-gray-700 block mb-4 hover:underline">Qué se ajusta a mi presupuesto</Link>
-              <Link href="/" className="text-xs text-gray-700 block mb-4 hover:underline">Valor de intercambio Kelly Blue Book</Link>
-              <Link href="/" className="text-xs text-gray-700 block mb-4 hover:underline">Ofertas locales</Link>
-              <Link href="/" className="text-xs text-gray-700 block mb-0 hover:underline">Comprar partes y accesorios</Link>
+              <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Calcula tu pago</Link>
+              <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Qué se ajusta a mi presupuesto</Link>
+              <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Valor de intercambio Kelly Blue Book</Link>
+              <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Ofertas locales</Link>
+              <Link href="/" className="text-sm text-gray-700 block mb-0 hover:underline">Comprar partes y accesorios</Link>
+            </div>
+         </div>
+        }
+
+        {
+         menu == 3 &&
+         <div className="hidden lg:grid grid-cols-12 bg-white border-t rounded-b-lg w-full lg:w-11/12 xl:w-4/6 right-0 xl:mr-20 absolute z-20">
+            <div className="col-span-4 flex flex-col">
+                <button onMouseEnter={() => (setActiveTabDue(1))} className={`border-b-[#d8d8d8] border-b border-r border-collapse p-4 font-semibold text-sm flex items-center gap-x-5 ${activeTabDue === 1 ? 'bg-white border-r-0': 'bg-[#EBEBEB]'}`}>
+                  <div className={`p-2 flex items-center justify-center rounded-full ml-8 ${activeTabDue === 1 ? 'bg-black text-white': 'bg-white'}`}>
+                    <RiUserLine className="text-2xl" />
+                  </div> 
+                  PARA DUEÑOS
+                </button>
+
+                <button onMouseEnter={() => (setActiveTabDue(2))} className={`border-b-[#d8d8d8] border-b border-r border-collapse p-4 font-semibold text-sm flex items-center gap-x-5 ${activeTabDue === 2 ? 'bg-white border-r-0': 'bg-[#EBEBEB]'}`}>
+                  <div className={`p-2 flex items-center justify-center rounded-full ml-8 ${activeTabDue === 2 ? 'bg-black text-white': 'bg-white'}`}>
+                    <GoTools className="text-2xl" />
+                  </div> 
+                  SERVICES Y PARTS
+                </button>
+
+                <button onMouseEnter={() => (setActiveTabDue(3))} className={`border-b-[#d8d8d8] border-b border-r border-collapse p-4 rounded-l-lg rounded-t-none font-semibold text-sm flex items-center gap-x-5 ${activeTabDue === 3 ? 'bg-white border-r-0': 'bg-[#EBEBEB]'}`}>
+                  <div className={`p-2 flex items-center justify-center rounded-full ml-8 ${activeTabDue === 3 ? 'bg-black text-white': 'bg-white'}`}>
+                    <FaListUl  UserLine className="text-2xl" />
+                  </div> 
+                  FEATURES
+                </button>
+            </div>
+            <div className="col-span-8 px-10 pt-5 grid grid-cols-12 gap-x-8">
+                {activeTabDue == 1 && 
+                  <>
+                    <div className="col-span-6">
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Dueños Inicio</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Manual & Warranties</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Service History</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Audio Multimedia y Connected Services</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Llamados a Revision</Link>
+                    </div>
+
+                    <div className="col-span-6">
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Warning Lights</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Shedule Service</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Services Centers</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Vehicle Specs</Link>
+                    </div>
+                  </>
+                }
+
+                {activeTabDue == 2 && 
+                  <>
+                    <div className="col-span-6 mt-10">
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Services Epecials</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Mantenance shedule</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Certified Collison Centers</Link>
+                    </div>
+
+                    <div className="col-span-6 mt-10">
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Toyota Express Maintenance</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Toyota Genuine Parts</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">ToyotaCare y planes de mantenimiento</Link>
+                    </div>
+                  </>
+                }
+                {activeTabDue == 3 && 
+                  <>
+                    <div className="col-span-6 mt-5">
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Vehicle Videos</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Safety Hub</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Clean Assist</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Kick Sensor</Link>
+                    </div>
+
+                    <div className="col-span-6 mt-5">
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">bZ4X</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Dashcam</Link>
+                      <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Over the Air Updates</Link>
+                    </div>
+                  </>
+                }
             </div>
          </div>
         }
