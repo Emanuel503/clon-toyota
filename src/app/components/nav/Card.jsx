@@ -17,7 +17,8 @@ export default function Card({id, image, imageAlt, legend, title, price, priceTe
   }
 
   return (
-    <Link onMouseEnter={() => {handleHover(id, true)}} onMouseLeave={() => {handleHover(id, false)}} href={href} className="col-span-3 flex flex-col p-3 gap-2">
+    <div className='col-span-3'>
+      <Link onMouseEnter={() => {handleHover(id, true)}} onMouseLeave={() => {handleHover(id, false)}} href={href} className="flex flex-col px-3 gap-2">
         <div className="relative">
             <Image
                 src={image}
@@ -37,12 +38,14 @@ export default function Card({id, image, imageAlt, legend, title, price, priceTe
             <h5><span className="font-bold">{price}</span> {priceText}</h5>
             <h5>{firstDescription} <span className="font-bold">{dues}</span> {secondDescription}</h5>
 
-            <div className="flex flex-row gap-2 mt-3">
-                <Link href="/" className={`font-semibold flex items-center gap-x-2 hover:gap-4 transition-all ${hover == id ? 'text-black' : 'text-white'}`}>Diseñar <MdOutlineKeyboardArrowRight className='text-xl'/></Link>
-                <span className={`text-xs flex items-center justify-center ${hover == id ? 'text-gray-500' : 'text-white'}`}>|</span>
-                <Link href="/" className={`font-semibold flex items-center gap-x-2 hover:gap-4 transition-all ${hover == id ? 'text-black' : 'text-white'}`}>Ofertas locales <MdOutlineKeyboardArrowRight className='text-xl'/></Link>
-            </div>
+            
         </div>
-    </Link>
+      </Link>
+      <div className="flex flex-row gap-2 px-3 my-2">
+        <Link href="/" className={`font-semibold flex items-center gap-x-2 hover:gap-4 transition-all ${hover == id ? 'text-black' : 'text-white'}`}>Diseñar <MdOutlineKeyboardArrowRight className='text-xl'/></Link>
+        <span className={`text-xs flex items-center justify-center ${hover == id ? 'text-gray-500' : 'text-white'}`}>|</span>
+        <Link href="/" className={`font-semibold flex items-center gap-x-2 hover:gap-4 transition-all ${hover == id ? 'text-black' : 'text-white'}`}>Ofertas locales <MdOutlineKeyboardArrowRight className='text-xl'/></Link>
+      </div>
+    </div>
   )
 }
