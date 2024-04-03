@@ -9,6 +9,8 @@ import { useState } from "react";
 import TabVehicle from "./nav/TabVehicle";
 import TabGuide from "./nav/TabGuide";
 import TabOwners from "./nav/TabOwners";
+import TabUser from "./nav/TabUser";
+import { IoMdClose } from "react-icons/io";
 
 export default function Nav() {
 
@@ -44,7 +46,9 @@ export default function Nav() {
                 
                     <Link href="/" className="border border-white hover:border-black rounded-3xl px-4 py-2 font-semibold flex items-center gap-x-2 transition-all duration-200">Buscar inventario</Link>
                 
-                    <FaUserCircle className='text-4xl hover:text-gray-400 transition-colors'/>
+                    <button onClick={() => (toggleMenu(4))}>
+                      {menu == 4 ? <div className="bg-black px-2 py-2 text-white rounded-full"><IoMdClose className="text-xl" /> </div> : <FaUserCircle className='text-4xl hover:text-gray-400 transition-colors'/>}
+                    </button>
                 </div>
 
                 <button>
@@ -66,6 +70,11 @@ export default function Nav() {
         {
          menu == 3 &&
          <TabOwners/>
+        }
+
+        {
+         menu == 4 &&
+         <TabUser/>
         }
     </nav>
   )
