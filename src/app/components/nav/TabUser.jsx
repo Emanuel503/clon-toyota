@@ -6,7 +6,7 @@ import { SlLocationPin } from "react-icons/sl";
 export default function TabUser() {
   return (
     <div className="hidden lg:block bg-white pt-8 border-t rounded-b-lg w-auto right-0 xl:mr-10 absolute z-20">
-        <h2 className='font-bold text-center mb-4 text-xl'>My toyota</h2>
+        <h2 className='font-bold text-center mb-4 text-xl'>My Toyota</h2>
 
         <div className='border-gray-300 border text-gray-600 mx-8 text-sm rounded-lg p-8'>
             <p className='text-center leading-6'>
