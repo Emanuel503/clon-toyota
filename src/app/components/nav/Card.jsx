@@ -41,7 +41,7 @@ export default function Card({id, image, imageAlt, legend, title, price, priceTe
             
         </div>
       </Link>
-      <div className="flex flex-row gap-2 px-3 my-2">
+      <div onMouseEnter={() => {handleHover(id, true)}} onMouseLeave={() => {handleHover(id, false)}} className="flex flex-row gap-2 px-3 mb-3 pt-2">
         <Link href="/" className={`font-semibold flex items-center gap-x-2 hover:gap-4 transition-all ${hover == id ? 'text-black' : 'text-white'}`}>Diseñar <MdOutlineKeyboardArrowRight className='text-xl'/></Link>
         <span className={`text-xs flex items-center justify-center ${hover == id ? 'text-gray-500' : 'text-white'}`}>|</span>
         <Link href="/" className={`font-semibold flex items-center gap-x-2 hover:gap-4 transition-all ${hover == id ? 'text-black' : 'text-white'}`}>Ofertas locales <MdOutlineKeyboardArrowRight className='text-xl'/></Link>
