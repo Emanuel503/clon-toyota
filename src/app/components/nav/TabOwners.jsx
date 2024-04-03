@@ -27,7 +27,7 @@ export default function TabOwners() {
 
             <button onMouseEnter={() => (setActiveTabDue(3))} className={`border-b-[#d8d8d8] border-b border-r border-collapse p-4 rounded-l-lg rounded-t-none font-semibold text-sm flex items-center gap-x-5 ${activeTabDue === 3 ? 'bg-white border-r-0': 'bg-[#EBEBEB]'}`}>
                 <div className={`p-2 flex items-center justify-center rounded-full ml-8 ${activeTabDue === 3 ? 'bg-black text-white': 'bg-white'}`}>
-                    <FaListUl  UserLine className="text-2xl" />
+                    <FaListUl className="text-2xl" />
                 </div> 
                 FEATURES
             </button>
