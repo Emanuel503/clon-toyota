@@ -11,6 +11,7 @@ import TabGuide from "./nav/TabGuide";
 import TabOwners from "./nav/TabOwners";
 import TabUser from "./nav/TabUser";
 import { IoMdClose } from "react-icons/io";
+import TabMobile from "./nav/TabMobile";
 
 export default function Nav() {
 
@@ -23,6 +24,8 @@ export default function Nav() {
      setMenu(item)
     }
   }
+
+  const [active, setActive] = useState(false)
 
   return (
     <nav className="h-16 w-full bg-white z-20">
@@ -51,8 +54,10 @@ export default function Nav() {
                     </button>
                 </div>
 
-                <button>
-                    <VscMenu className="lg:hidden text-4xl"/>
+                <button onClick={() => (toggleMenu(5))}>
+                  {
+                    active ? <div onClick={() => {setActive(false)}} className="lg:hidden bg-black px-2 py-2 text-white rounded-full"><IoMdClose className="text-xl" /> </div> : <VscMenu onClick={() => {setActive(true)}} className="lg:hidden text-4xl"/>
+                  }  
                 </button>
             </div>
         </div>
@@ -75,6 +80,11 @@ export default function Nav() {
         {
          menu == 4 &&
          <TabUser/>
+        }
+
+        {
+         menu == 5 &&
+         <TabMobile/>
         }
     </nav>
   )

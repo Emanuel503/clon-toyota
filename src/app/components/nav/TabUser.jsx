@@ -24,15 +24,15 @@ export default function TabUser() {
         </div>
 
         <div className='p-10 flex flex-col'>
-            <div className='border-gray-300 border-b py-2 mb-2 font-semibold text-sm hover:underline flex items-center gap-3'>
+            <button className='border-gray-300 border-b py-3 mb-2 font-semibold text-sm hover:underline flex items-center gap-3'>
                 <FaHeart className='text-xl'/> View saves (0)
-            </div>
-            <div className='border-gray-300 border-b py-2 mb-2 font-semibold text-sm hover:underline flex items-center gap-3'>
+            </button>
+            <button className='border-gray-300 border-b py-3 mb-2 font-semibold text-sm hover:underline flex items-center gap-3'>
                 <div className='w-5 h-5 bg-white border-black border-2 rounded-full'></div> Notification (0)
-            </div>
-            <div className='py-2 font-semibold text-sm hover:underline flex items-center gap-3'>
+            </button>
+            <button className='py-2 font-semibold text-sm hover:underline flex items-center gap-3'>
                 Manage Preferences
-            </div>
+            </button>
         </div>
         <div className='bg-gray-200 w-full h-auto rounded-b-lg p-5'>
             <h3>MI UBICACIÓN</h3>
