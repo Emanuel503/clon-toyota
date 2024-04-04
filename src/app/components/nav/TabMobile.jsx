@@ -79,6 +79,26 @@ export default function TabMobile() {
             </div>
           </>
         }
+
+        {menu == 2 && 
+          <>
+            <div className='text-center px-2 py-5 mb-10 border-b w-full'>
+              <button onClick={() => (setMenu(null))} className='inline-block float-left' type="button">
+                <MdOutlineKeyboardArrowLeft className='text-3xl'/>
+              </button>
+              <h3 className="font-semibold inline-block">VEHÍCULOS</h3>
+            </div>
+
+            <div className='my-7 mx-8'>
+                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Autos y Minivan <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
+                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Camionetas <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
+                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Crossovers y SUV <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
+                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Electrificados <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
+                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Vehículos futuros <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
+                <Link className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline" href="/">Ver todos los vehículos</Link>
+            </div>
+          </>
+        }
     </div>
   )
 }
