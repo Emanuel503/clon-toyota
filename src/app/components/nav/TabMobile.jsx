@@ -111,10 +111,10 @@ export default function TabMobile() {
             </div>
 
             <div className='my-7 mx-8'>
-                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Diseña y cotiza <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
-                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Buscar inventario <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
-                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Toyota Certificados <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
-                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Accesorios <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
+                <Link className="font-semibold flex items-center justify-between text-sm border-b pb-4 mb-4 hover:underline w-full" href="/">Diseña y cotiza</Link>
+                <Link className="font-semibold flex items-center justify-between text-sm border-b pb-4 mb-4 hover:underline w-full" href="/">Buscar inventario</Link>
+                <Link className="font-semibold flex items-center justify-between text-sm border-b pb-4 mb-4 hover:underline w-full" href="/">Toyota Certificados</Link>
+                <Link className="font-semibold flex items-center justify-between text-sm border-b pb-4 mb-4 hover:underline w-full" href="/">Accesorios</Link>
                 <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Buscar concesionario</Link>
                 <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Ver folletos</Link>
                 <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Comprar</Link>
