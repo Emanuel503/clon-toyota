@@ -2,7 +2,8 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { SlLocationPin } from 'react-icons/sl'
-import { FaHeart, FaUserCircle } from "react-icons/fa";
+import { FaHeart, FaListUl, FaUserCircle } from "react-icons/fa";
+import { GoTools } from 'react-icons/go';
 
 export default function TabMobile() {
   
@@ -96,6 +97,66 @@ export default function TabMobile() {
                 <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Electrificados <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
                 <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Vehículos futuros <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
                 <Link className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline" href="/">Ver todos los vehículos</Link>
+            </div>
+          </>
+        }
+
+        {menu == 3 && 
+          <>
+            <div className='text-center px-2 py-5 mb-10 border-b w-full'>
+              <button onClick={() => (setMenu(null))} className='inline-block float-left' type="button">
+                <MdOutlineKeyboardArrowLeft className='text-3xl'/>
+              </button>
+              <h3 className="font-semibold inline-block">GUÍA DE COMPRA</h3>
+            </div>
+
+            <div className='my-7 mx-8'>
+                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Diseña y cotiza <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
+                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Buscar inventario <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
+                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Toyota Certificados <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
+                <button className="font-semibold flex items-center justify-between text-sm border-b pb-3 mb-4 hover:underline w-full" href="/">Accesorios <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Buscar concesionario</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Ver folletos</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Comprar</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Pedir cotización</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Toyota Financial Services</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Southeast Toyora Finance</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Calcula tu pago</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Qué se ajusta a mi presupuesto</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Valor de intercambio kelly Blue Blook</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Ofertas laborales</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Comprar partes y accesorios</Link>
+            </div>
+          </>
+        }
+
+        {menu == 4 && 
+          <>
+            <div className='text-center px-2 py-5 mb-10 border-b w-full'>
+              <button onClick={() => (setMenu(null))} className='inline-block float-left' type="button">
+                <MdOutlineKeyboardArrowLeft className='text-3xl'/>
+              </button>
+              <h3 className="font-semibold inline-block">GUÍA DE COMPRA</h3>
+            </div>
+
+            <div className='my-7 mx-8'>
+                <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Dueños Inicio</Link>
+                <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Manuals & Warranties</Link>
+                <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Services History</Link>
+                <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Audio Multimedia y Connected Services</Link>
+                <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Llamado a Revisión</Link>
+                <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Warning Lights</Link>
+                <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Shedule Services</Link>
+                <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Service Centers</Link>
+                <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Vehicle Specs</Link>
+                <button className="font-semibold flex items-center justify-between text-sm border-b border-t py-4 hover:underline w-full" href="/">
+                  <div className='flex items-center'><GoTools className="text-2xl mr-3" /> SERVICES & PARTS</div> 
+                  <MdOutlineKeyboardArrowRight className='text-3xl'/>
+                </button>
+                <button className="font-semibold flex items-center justify-between text-sm border-b py-4 mb-4 hover:underline w-full" href="/">
+                  <div className='flex items-center'><FaListUl className="text-2xl mr-3" /> FEATURES</div> 
+                  <MdOutlineKeyboardArrowRight className='text-3xl'/>
+                </button>
             </div>
           </>
         }
