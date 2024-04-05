@@ -180,6 +180,27 @@ export default function TabMobile() {
             </div>
           </>
         }
+
+        {menu == 6 && 
+          <>
+            <div className='text-center px-2 py-5 mb-10 border-b w-full'>
+              <button onClick={() => (setMenu(4))} className='inline-block float-left' type="button">
+                <MdOutlineKeyboardArrowLeft className='text-3xl'/>
+              </button>
+              <h3 className="font-semibold inline-block">FEATURES</h3>
+            </div>
+
+            <div className='my-7 mx-8'>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">Vehicle Videos</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">Safety Hub</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">Clean Assist</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">Kick Sensor</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">bZ4X</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">Dashcam</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">Over the Air Updates</Link>
+            </div>
+          </>
+        }
     </div>
   )
 }
