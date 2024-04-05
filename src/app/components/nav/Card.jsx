@@ -22,7 +22,7 @@ export default function Card({id, image, imageAlt, legend, title, price, priceTe
         <div className="relative">
             <Image
                 src={image}
-                width={350}
+                width={420}
                 height={250}
                 alt={imageAlt}
                 className="w-96 h-auto rounded-lg"
