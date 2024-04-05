@@ -149,14 +149,34 @@ export default function TabMobile() {
                 <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Shedule Services</Link>
                 <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Service Centers</Link>
                 <Link className="font-semibold flex items-center justify-between text-sm pb-1 mb-4 hover:underline" href="/">Vehicle Specs</Link>
-                <button className="font-semibold flex items-center justify-between text-sm border-b border-t py-4 hover:underline w-full" href="/">
+                <button onClick={() => {setMenu(5)}} className="font-semibold flex items-center justify-between text-sm border-b border-t py-4 hover:underline w-full" href="/">
                   <div className='flex items-center'><GoTools className="text-2xl mr-3" /> SERVICES & PARTS</div> 
                   <MdOutlineKeyboardArrowRight className='text-3xl'/>
                 </button>
-                <button className="font-semibold flex items-center justify-between text-sm border-b py-4 mb-4 hover:underline w-full" href="/">
+                <button onClick={() => {setMenu(6)}} className="font-semibold flex items-center justify-between text-sm border-b py-4 mb-4 hover:underline w-full" href="/">
                   <div className='flex items-center'><FaListUl className="text-2xl mr-3" /> FEATURES</div> 
                   <MdOutlineKeyboardArrowRight className='text-3xl'/>
                 </button>
+            </div>
+          </>
+        }
+
+        {menu == 5 && 
+          <>
+            <div className='text-center px-2 py-5 mb-10 border-b w-full'>
+              <button onClick={() => (setMenu(4))} className='inline-block float-left' type="button">
+                <MdOutlineKeyboardArrowLeft className='text-3xl'/>
+              </button>
+              <h3 className="font-semibold inline-block">SERVICE & PARTS</h3>
+            </div>
+
+            <div className='my-7 mx-8'>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">Services Special</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">Maintenance shedule</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">Certified Collison Centers</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">Toyota Express Maintenance</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">Toyota Genuine Parts</Link>
+                <Link className="flex items-center justify-between text-sm pb-1 mb-3 hover:underline" href="/">ToyotaCare y planes de matenimiento</Link>
             </div>
           </>
         }
