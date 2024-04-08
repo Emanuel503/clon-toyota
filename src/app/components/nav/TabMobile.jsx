@@ -224,7 +224,7 @@ export default function TabMobile() {
                 firstDescription="Hasta"
                 dues="42/41"
                 secondDescription="Est. MPG *"
-                href="/"
+                href="/tacoma"
                 >
               </Card>
 

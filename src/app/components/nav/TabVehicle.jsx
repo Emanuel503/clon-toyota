@@ -44,7 +44,7 @@ export default function TabVehicle() {
                 firstDescription="Hasta"
                 dues="42/41"
                 secondDescription="Est. MPG *"
-                href="/"
+                href="/tacoma"
                 >
                 </Card>
 
