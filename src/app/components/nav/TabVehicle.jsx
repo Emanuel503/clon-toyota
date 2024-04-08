@@ -32,7 +32,7 @@ export default function TabVehicle() {
                 </button>
             </div>
 
-            <div className={`grid-cols-12 mx-14 xl:mx-72 gap-5 transition-all duration-700 ${activeTab === 1 ? 'grid' : 'hidden'}`}>
+            <div className={`grid-cols-12 mx-14 xl:mx-48 2xl:mx-72 gap-5 transition-all duration-700 ${activeTab === 1 ? 'grid' : 'hidden'}`}>
                 <Card
                 id="1"
                 image="/crv.webp"
@@ -154,7 +154,7 @@ export default function TabVehicle() {
                 </Card>
             </div>
 
-            <div className={`grid-cols-12 mx-14 xl:mx-72 gap-5 transition-all duration-700 ${activeTab === 2 ? 'grid' : 'hidden'}`}>
+            <div className={`grid-cols-12 mx-14 xl:mx-48 2xl:mx-72 gap-5 transition-all duration-700 ${activeTab === 2 ? 'grid' : 'hidden'}`}>
                 <Card
                 id="9"
                 image="/tah.webp"
@@ -201,7 +201,7 @@ export default function TabVehicle() {
                 </Card>
             </div>
 
-            <div className={`grid-cols-12 mx-14 xl:mx-72 gap-5 transition-all duration-700 ${activeTab === 3 ? 'grid' : 'hidden'}`}>
+            <div className={`grid-cols-12 mx-14 xl:mx-48 2xl:mx-72 gap-5 transition-all duration-700 ${activeTab === 3 ? 'grid' : 'hidden'}`}>
                 <Card
                 id="9"
                 image="/tah.webp"
@@ -263,7 +263,7 @@ export default function TabVehicle() {
                 </Card>
             </div>
 
-            <div className={`grid-cols-12 mx-14 xl:mx-72 gap-5 transition-all duration-700 ${activeTab === 4 ? 'grid' : 'hidden'}`}>
+            <div className={`grid-cols-12 mx-14 xl:mx-48 2xl:mx-72 gap-5 transition-all duration-700 ${activeTab === 4 ? 'grid' : 'hidden'}`}>
                 <Card
                 id="1"
                 image="/crv.webp"
@@ -385,7 +385,7 @@ export default function TabVehicle() {
                 </Card>
             </div>
 
-            <div className={`grid-cols-12 mx-14 xl:mx-72 gap-5 transition-all duration-700 ${activeTab === 5 ? 'grid' : 'hidden'}`}>
+            <div className={`grid-cols-12 mx-14 xl:mx-48 2xl:mx-72 gap-5 transition-all duration-700 ${activeTab === 5 ? 'grid' : 'hidden'}`}>
                 <Card
                 id="9"
                 image="/tah.webp"

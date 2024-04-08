@@ -26,7 +26,8 @@ export default function Card({id, image, imageAlt, legend, title, price, priceTe
                 height={250}
                 alt={imageAlt}
                 className="w-96 h-auto rounded-lg"
-                layout="responsive"
+                priority={true}
+                loading='eager'
             />
             <div className={`absolute top-0 rounded-lg w-full h-full transition-all flex items-center justify-center ${hover == id ? 'bg-black/75' : ''}`}>
                 <FiPlus className={`text-2xl text-white ${hover == id ? 'block' : 'hidden'}`} />
