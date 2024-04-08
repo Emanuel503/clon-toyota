@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { RiUserLine } from "react-icons/ri";
 import { GoTools } from "react-icons/go";
 import { FaListUl } from "react-icons/fa";
-import Link from 'next/link';
 
 export default function TabOwners() {
 
@@ -36,18 +35,18 @@ export default function TabOwners() {
             {activeTabDue == 1 && 
                 <>
                     <div className="col-span-6">
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Dueños Inicio</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Manual & Warranties</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Service History</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Audio Multimedia y Connected Services</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Llamados a Revision</Link>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Dueños Inicio</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Manual & Warranties</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Service History</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Audio Multimedia y Connected Services</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Llamados a Revision</a>
                     </div>
 
                     <div className="col-span-6">
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Warning Lights</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Shedule Service</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Services Centers</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Vehicle Specs</Link>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Warning Lights</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Shedule Service</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Services Centers</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Vehicle Specs</a>
                     </div>
                 </>
             }
@@ -55,31 +54,31 @@ export default function TabOwners() {
             {activeTabDue == 2 && 
                 <>
                     <div className="col-span-6 mt-10">
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Services Epecials</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Mantenance shedule</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Certified Collison Centers</Link>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Services Epecials</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Mantenance shedule</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Certified Collison Centers</a>
                     </div>
 
                     <div className="col-span-6 mt-10">
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Toyota Express Maintenance</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Toyota Genuine Parts</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">ToyotaCare y planes de mantenimiento</Link>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Toyota Express Maintenance</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Toyota Genuine Parts</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">ToyotaCare y planes de mantenimiento</a>
                     </div>
                 </>
             }
             {activeTabDue == 3 && 
                 <>
                     <div className="col-span-6 mt-5">
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Vehicle Videos</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Safety Hub</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Clean Assist</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Kick Sensor</Link>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Vehicle Videos</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Safety Hub</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Clean Assist</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Kick Sensor</a>
                     </div>
 
                     <div className="col-span-6 mt-5">
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">bZ4X</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Dashcam</Link>
-                        <Link href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Over the Air Updates</Link>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">bZ4X</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Dashcam</a>
+                        <a href="/" className="text-sm text-gray-700 block mb-4 hover:underline">Over the Air Updates</a>
                     </div>
                 </>
             }
