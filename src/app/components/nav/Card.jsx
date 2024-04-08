@@ -24,7 +24,7 @@ export default function Card({id, image, imageAlt, legend, title, price, priceTe
                 width={420}
                 height={250}
                 alt={imageAlt}
-                className="w-96 h-auto rounded-lg"
+                className="w-full lg:w-96 h-auto rounded-lg"
                 priority={true}
                 loading='eager'
             />
