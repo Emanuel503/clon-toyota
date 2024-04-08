@@ -18,21 +18,21 @@ export default function TabUser() {
             </p>
 
             <div className='flex items-center justify-center mt-6'>
-                <button className='px-8 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-3xl'>Sign In</button>
-                <button className='px-8 py-2 text-red-600 font-semibold hover:underline rounded-3xl flex items-center gap-2'>Create Account <MdOutlineKeyboardArrowRight className='text-2xl'/></button>
+                <a href='/' className='px-8 py-2 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-3xl'>Sign In</a>
+                <a href='/' className='px-8 py-2 text-red-600 font-semibold hover:underline rounded-3xl flex items-center gap-2'>Create Account <MdOutlineKeyboardArrowRight className='text-2xl'/></a>
             </div>
         </div>
 
         <div className='p-10 flex flex-col'>
-            <button className='border-gray-300 border-b py-3 mb-2 font-semibold text-sm hover:underline flex items-center gap-3'>
+            <a href='/' className='border-gray-300 border-b py-3 mb-2 font-semibold text-sm hover:underline flex items-center gap-3'>
                 <FaHeart className='text-xl'/> View saves (0)
-            </button>
-            <button className='border-gray-300 border-b py-3 mb-2 font-semibold text-sm hover:underline flex items-center gap-3'>
+            </a>
+            <a href='/' className='border-gray-300 border-b py-3 mb-2 font-semibold text-sm hover:underline flex items-center gap-3'>
                 <div className='w-5 h-5 bg-white border-black border-2 rounded-full'></div> Notification (0)
-            </button>
-            <button className='py-2 font-semibold text-sm hover:underline flex items-center gap-3'>
+            </a>
+            <a href='/' className='py-2 font-semibold text-sm hover:underline flex items-center gap-3'>
                 Manage Preferences
-            </button>
+            </a>
         </div>
         <div className='bg-gray-200 w-full h-auto rounded-b-lg p-5'>
             <h3>MI UBICACIÓN</h3>
