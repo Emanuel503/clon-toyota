@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { FaHeart } from "react-icons/fa";
 import { SlLocationPin } from "react-icons/sl";
