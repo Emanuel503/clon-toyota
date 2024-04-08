@@ -15,7 +15,7 @@ export default function Footer() {
 
                 <Link className='font-bold text-sm text-red-600 hover:underline underline-offset-2 transition-all flex flex-row items-start justify-normal md:justify-center xl:justify-normal gap-x-2 col-span-12 md:col-span-5 text-left md:text-center xl:text-left' href="/">
                     TUS OPCIONES DE PRIVACIDAD
-                    <Image src="/privacyoptions.svg" width={40} height={40} alt="Icono de boton de privacidad" />
+                    <Image src="/privacyoptions.svg" width={10} height={10} className='w-10 h-auto' alt="Icono de boton de privacidad" />
                 </Link>
 
                 <Link className='font-bold text-sm hover:underline underline-offset-2 transition-all col-span-12 md:col-span-4 text-left md:text-center xl:text-left' href="/">Opciones de cookies</Link>
