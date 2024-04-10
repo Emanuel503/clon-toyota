@@ -65,6 +65,13 @@ export default function Footer() {
             <Link className='text-xs pr-4 border-r border-black font-semibold hover:underline underline-offset-1' href="/">Términos legales</Link>
             <Link className='text-xs font-semibold hover:underline underline-offset-1' href="/">Mapa del sitio</Link>
         </div>
+
+        <div className='flex flex-col gap-2 items-center justify-center mt-8'>
+            Página con fines educativos. Puedes visitar la página original de Toyota haciendo clic en el siguiente enlace:
+            <a href="https://www.toyota.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold hover:underline underline-offset-1">
+                https://www.toyota.com/
+            </a>
+        </div>
     </footer>
   )
 }

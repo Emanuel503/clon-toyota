@@ -12,6 +12,7 @@ import TabOwners from "./nav/TabOwners";
 import TabUser from "./nav/TabUser";
 import { IoMdClose } from "react-icons/io";
 import TabMobile from "./nav/TabMobile";
+import { FaPager } from "react-icons/fa";
 
 export default function Nav() {
 
@@ -30,7 +31,7 @@ export default function Nav() {
   return (
     <nav className="h-16 w-full bg-white z-20">
         <div className="flex flex-row items-center px-12 h-full w-full">
-            <Link href="https://www.toyota.com/">
+            <Link href="/">
                 <Image
                     src="/toyota_logo.svg"
                     width={250}
