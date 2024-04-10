@@ -67,9 +67,9 @@ export default function Footer() {
         </div>
 
         <div className='flex flex-col gap-2 items-center justify-center mt-8'>
-            Página con fines educativos. Puedes visitar la página original de Toyota haciendo clic en el siguiente enlace:
+            Página con fines educativos. Puedes visitar la página original de Toyota has clic en el siguiente enlace:
             <a href="https://www.toyota.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold hover:underline underline-offset-1">
-                https://www.toyota.com/
+                www.toyota.com
             </a>
         </div>
     </footer>
